@@ -1,0 +1,71 @@
+/* Basic styles for the entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #2a5298, #1e3c72); /* Example gradient background */
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Full height of the screen */
+  width: 100%;
+  max-width: 3000px; /* Full width of the screen */
+  background: linear-gradient(to bottom, #2a5298, #1e3c72); /* Example gradient background */
+  position: relative; /* Ensure absolute positioning for confetti */
+}
+
+.intro-header {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ff5e57;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.intro-button:hover {
+  background-color: #ff3a2f;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
